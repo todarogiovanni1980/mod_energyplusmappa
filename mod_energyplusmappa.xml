@@ -14,7 +14,7 @@
 			<p>Mostra tutti i centri di costo del CNR forniti dalla piattaforma Energy + realizzata da ITD-CNR Palermo​</p>
 		
 			<ul>
-				<li>Versione 1.2.6 Correzzione bug.
+				<li>Versione 1.2.6 Correzione bug.
 				<li>Versione 1.2.5 aggiunta la possibilità di indicare un valore di clusterizzazione degli elementi nella mappa</li>
 				<li>Versione 1.2.4 aggiunta la possibilità di indicare una fonte dei dati alternativa a quella dove è installato il modulo con un url</li>
 				<li>Versione 1.2.3 aggiunta la possibilità di scegliere se visualizzare solo le stazioni meteo oppure tutti i centri di costo</li>

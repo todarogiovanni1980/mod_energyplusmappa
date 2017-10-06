@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" method="upgrade" client="">
+	<name>Mappa centri di costo - Energy plus management</name>
+	<creationDate>6 Ottobre 2017 10:16</creationDate>
+	<author>Todaro Giovanni</author>
+	<authorEmail>giovanni.todaro@cnr.it</authorEmail>
+	<authorUrl>http://www.cnr.it</authorUrl>
+	<copyright>Copyright © 2015 - All rights reserved.</copyright>
+	<license>GNU General Public License v2.0</license>
+	<version>1.2.6</version>
+	
+	<description><![CDATA[
+			<h1>Mappa dei centri di costo CNR</h1>
+			<p>Mostra tutti i centri di costo del CNR forniti dalla piattaforma Energy + realizzata da ITD-CNR Palermo​</p>
+		
+			<ul>
+				<li>Versione 1.2.6 Correzzione bug.
+				<li>Versione 1.2.5 aggiunta la possibilità di indicare un valore di clusterizzazione degli elementi nella mappa</li>
+				<li>Versione 1.2.4 aggiunta la possibilità di indicare una fonte dei dati alternativa a quella dove è installato il modulo con un url</li>
+				<li>Versione 1.2.3 aggiunta la possibilità di scegliere se visualizzare solo le stazioni meteo oppure tutti i centri di costo</li>
+				<li>Versione 1.2.1 Correzioni varie adattamento grafico</li>
+				<li>Versione 1.2 centri di costo raggruppati per una migliore visualizzazione</li>
+				<li>Versione 1.1 modalita mappa in rilievo</li>
+			</ul>
+			
+		 ]]></description>
+	<files>
+		<filename module="mod_energyplusmappa">mod_energyplusmappa.php</filename>
+		<filename>mod_energyplusmappa.xml</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+	</files>
+	<config>
+		<fields name="params">
+			
+			<fieldset name="basic">
+				<field
+				    name="stazionimeteo"
+				    default="0"
+					class="btn-group btn-group-yesno"
+					type="radio"
+					label="MOD_ENERGYPLUSMAPPA_FIELD_SHOWSTAZIONIMETEO_LABEL"
+					description="MOD_ENERGYPLUSMAPPA_FIELD_SHOWSTAZIONIMETEO_DESC">
+				    <option value="1">Stazioni Meteo</option>
+				    <option value="0">Centri di costo</option>
+				</field>
+				
+				<field
+					name="fontedati" 
+					type="url"
+					default=""
+					label="MOD_ENERGYPLUSMAPPA_FIELD_FONTEDATI_LABEL"
+					description="MOD_ENERGYPLUSMAPPA_FIELD_FONTEDATI_DESC"/>
+					
+				<field
+					name="cluster"
+					type="text"
+					default="50"
+					label="MOD_ENERGYPLUSMAPPA_FIELD_CLUSTER_LABEL"
+					description="MOD_ENERGYPLUSMAPPA_FIELD_CLUSTER_DESC" />
+					
+			</fieldset>
+			
+			<fieldset name="advanced">
+				
+				
+				
+				
+				
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config> 
+	<languages folder="language">
+		<language tag="it-IT">it-IT/it-IT.mod_energyplusmappa.sys.ini</language>
+		<language tag="it-IT">it-IT/it-IT.mod_energyplusmappa.ini</language>
+	</languages>
+</extension>
